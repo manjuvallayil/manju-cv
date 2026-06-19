@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manju Vallayil, PhD – CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #3E0097;
+    --purple-light: #6a30c4;
+    --slate: #2E2E2E;
+    --grey: #666666;
+    --bg: #f5f4f7;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--bg);
+    color: var(--slate);
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  a { color: var(--purple); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page {
+    max-width: 900px;
+    margin: 24px auto;
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(62,0,151,0.10);
+    padding: 32px 36px 40px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .header-photo {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #d0c0ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple);
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    border: 3px solid var(--purple);
+    overflow: hidden;
+  }
+
+  .header-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header-text { flex: 1; }
+
+  .header-name {
+    font-size: 22pt;
+    font-weight: 900;
+    color: var(--slate);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+
+  .header-tagline {
+    font-size: 10.5pt;
+    color: var(--purple);
+    font-weight: 400;
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    font-size: 9pt;
+    color: var(--grey);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .contact-item svg {
+    width: 11px; height: 11px;
+    fill: var(--purple);
+    flex-shrink: 0;
+  }
+
+  /* ── SUMMARY ── */
+  .summary {
+    font-size: 9.5pt;
+    color: var(--slate);
+    margin-bottom: 18px;
+    line-height: 1.6;
+    padding: 10px 14px;
+    border-left: 3px solid var(--purple);
+    background: #f9f7fd;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .summary p + p { margin-top: 8px; }
+
+  /* ── TWO-COLUMN LAYOUT ── */
+  .columns {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 0 28px;
+    align-items: start;
+  }
+
+  /* ── SECTION HEADING ── */
+  .cv-section { margin-bottom: 14px; }
+
+  .cv-section-title {
+    font-size: 11pt;
+    font-weight: 900;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid var(--purple);
+    margin-bottom: 10px;
+  }
+
+  .cv-subsection-title {
+    font-size: 10.5pt;
+    font-weight: 900;
+    color: var(--purple);
+    letter-spacing: 0.5px;
+    margin: 14px 0 8px;
+  }
+
+  /* ── EVENT ── */
+  .cv-event { margin-bottom: 10px; }
+
+  .cv-event-title {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: var(--slate);
+    line-height: 1.4;
+  }
+
+  .cv-event-subtitle {
+    font-size: 8.5pt;
+    color: var(--grey);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .cv-event-org {
+    color: var(--purple);
+    font-size: 9pt;
+    font-weight: 700;
+    margin-top: 3px;
+  }
+
+  .cv-event-meta {
+    color: var(--grey);
+    font-size: 8.5pt;
+    display: flex;
+    gap: 12px;
+    margin-top: 1px;
+    flex-wrap: wrap;
+  }
+
+  .cv-event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .cv-event-meta svg {
+    width: 9px; height: 9px;
+    fill: var(--grey);
+  }
+
+  .cv-event ul {
+    margin-top: 5px;
+    padding-left: 16px;
+  }
+
+  .cv-event ul li {
+    font-size: 9pt;
+    color: var(--slate);
+    margin-bottom: 3px;
+    line-height: 1.45;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px dashed #d5cce8;
+    margin: 8px 0;
+  }
+
+  /* ── RESEARCH OUTPUTS (book chapter / report / editorial) ── */
+  .output-item {
+    font-size: 9pt;
+    color: var(--slate);
+    margin-bottom: 9px;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-left: 2px solid #d0c0ef;
+  }
+
+  .output-title { font-style: italic; font-weight: 700; color: var(--slate); }
+  .output-meta { font-size: 8.5pt; color: var(--grey); margin-top: 2px; }
+
+  .pub-note {
+    font-size: 8.5pt;
+    color: var(--purple-light);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .pub-subsection-title {
+    font-size: 8.5pt;
+    font-weight: 900;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0 7px;
+  }
+
+  .pub-subsection-title:first-of-type { margin-top: 0; }
+
+  .pub-subsection-title svg {
+    width: 11px; height: 11px;
+    fill: var(--purple);
+    flex-shrink: 0;
+  }
+
+  .pub-item {
+    font-size: 8.7pt;
+    color: var(--slate);
+    margin-bottom: 9px;
+    line-height: 1.45;
+    padding-left: 10px;
+    border-left: 2px solid #d0c0ef;
+  }
+
+  .pub-title { font-weight: 700; }
+  .pub-authors { color: var(--grey); font-size: 8.3pt; margin-top: 2px; }
+  .pub-venue { font-style: italic; color: var(--purple-light); font-size: 8.3pt; margin-top: 1px; }
+
+  .researchgate-link {
+    font-size: 8.5pt;
+    color: var(--slate);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .researchgate-link a {
+    color: var(--purple-light);
+    word-break: break-all;
+  }
+
+  /* ── TAGS ── */
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .cvtag {
+    display: inline-block;
+    font-size: 8.5pt;
+    color: var(--purple);
+    background: #efe9fb;
+    border: 1px solid #d0c0ef;
+    border-radius: 12px;
+    padding: 3px 10px;
+    font-weight: 700;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag-item {
+    font-size: 9pt;
+    color: var(--slate);
+    padding: 3px 0;
+    border-bottom: 1px solid #eeebf5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .tag-item::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--purple);
+    flex-shrink: 0;
+  }
+
+  /* ── AWARDS ── */
+  .award-item {
+    font-size: 9pt;
+    color: var(--slate);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .award-year {
+    color: var(--purple);
+    font-weight: 700;
+    white-space: nowrap;
+    font-size: 8.5pt;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; max-width: 100%; }
+  }
+
+  @media (max-width: 700px) {
+    .columns { grid-template-columns: 1fr; }
+    .contact-row { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-photo"><img src="profile_photo.jpg" alt="Manju Vallayil"></div>
+    <div class="header-text">
+      <div class="header-name">MANJU VALLAYIL, PhD</div>
+      <div class="header-tagline">AI Researcher | Explainable AI, NLP &amp; AI for Language &amp; Culture</div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <svg viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+          <a href="mailto:manjuvallayil@gmail.com">manjuvallayil@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          Auckland, NZ
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <a href="https://github.com/manjuvallayil" target="_blank">manjuvallayil</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://linkedin.com/in/manju-vallayil-phd-5b1b7a142/" target="_blank">manju-vallayil-phd</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <p>AI Researcher with a PhD in Computer Science, working at the intersection of Explainable AI, natural language processing, and human-centred research design. Built AI-enabled systems for evidence retrieval, fact verification, and bilingual language learning, alongside qualitative and survey-based research evaluating how communities engage with AI tools in education, health, and culturally responsive contexts.</p>
+    <p>Doctoral research developed an explainable, context-aware retrieval framework for automated fact verification, combining NLP, thematic modelling, and interpretable machine learning. Experienced translating technical AI research into accessible findings for academic, government, and community stakeholders, with particular depth in AI applications supporting te reo Māori and Indigenous-led research.</p>
+  </div>
+
+  <!-- TWO COLUMNS -->
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+
+      <!-- EXPERIENCE -->
+      <div class="cv-section">
+        <div class="cv-section-title">Experience</div>
+
+        <div class="cv-event">
+          <div class="cv-event-title">Research Assistant – AI for Education and Community Innovation</div>
+          <div class="cv-event-org">Auckland University of Technology</div>
+          <div class="cv-event-meta">
+            <span>
+              <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+              Mar 2025 – Dec 2025
+            </span>
+            <span>
+              <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              Auckland, NZ
+            </span>
+          </div>
+          <ul>
+            <li>Contributed to <strong>TechTahi</strong>, a research project exploring AI-enabled, low-barrier tools to strengthen digital capability and culturally responsive technology engagement within Māori and Pacific contexts.</li>
+            <li>Worked across education, technology, and community perspectives to evaluate how AI tools are adopted and experienced by learners, informing inclusive research design.</li>
+            <li>Contributed to research synthesis, technical reporting, and co-authored AI-focused publications arising from project activities.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="cv-event">
+          <div class="cv-event-title">Research Officer – AI-Driven Language Learning Technology</div>
+          <div class="cv-event-org">Auckland University of Technology</div>
+          <div class="cv-event-meta">
+            <span>Sep 2021 – Dec 2024</span>
+            <span>Auckland, NZ</span>
+          </div>
+          <ul>
+            <li>Co-developed <strong>Te Kōhanga o te Tūī</strong>, an AI-enabled bilingual learning platform combining speech recognition and language technology to support early childhood acquisition of te reo Māori and English.</li>
+            <li>Supported applied NLP research, technical documentation, and interdisciplinary collaboration across language, education, and AI-focused work.</li>
+            <li>Contributed to stakeholder engagement and funding initiatives supporting AI-driven innovation and project development.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="cv-event">
+          <div class="cv-event-title">Research Assistant – AI Modelling for Tinnitus Detection</div>
+          <div class="cv-event-org">Auckland University of Technology</div>
+          <div class="cv-event-meta">
+            <span>Mar 2022 – Mar 2023</span>
+            <span>Auckland, NZ</span>
+          </div>
+          <ul>
+            <li>Contributed to interdisciplinary research using EEG, clinical, and psychological datasets to examine factors influencing tinnitus detection and treatment outcomes.</li>
+            <li>Supported data preparation, feature analysis, and model interpretation within a multidisciplinary research environment.</li>
+            <li>Developed analytical models and a minimum viable prototype (MVP) demonstrating practical application of AI-driven research findings.</li>
+          </ul>
+        </div>
+
+        <hr class="divider">
+
+        <div class="cv-event">
+          <div class="cv-event-title">Business Analyst</div>
+          <div class="cv-event-org">Tureya Limited</div>
+          <div class="cv-event-meta">
+            <span>Oct 2017 – Mar 2019</span>
+            <span>Auckland, NZ</span>
+          </div>
+          <ul>
+            <li>Led requirements gathering and stakeholder communication for mobile applications including user needs documentation.</li>
+            <li>Delivered UX wireframes, data flow diagrams, and test plans supporting MVP delivery.</li>
+          </ul>
+        </div>
+
+        <!-- ADDITIONAL RESEARCH OUTPUTS -->
+        <div class="cv-subsection-title">Editorial Contribution</div>
+
+        <div class="output-item">
+          <div class="output-title">Technical Editor, <em>The AI Engineering Bible for Developers</em></div>
+          <div class="output-meta">Book covering machine learning, LLMs, prompt engineering, and agentic AI systems</div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- EARLIER INDUSTRY EXPERIENCE -->
+        <div class="cv-subsection-title">Earlier Industry Experience</div>
+
+        <div class="cv-event">
+          <div class="cv-event-title">Software Quality Assurance Engineer</div>
+          <div class="cv-event-org">TechWyse Internet Marketing</div>
+          <div class="cv-event-meta">
+            <span>May 2012 – Feb 2014</span>
+            <span>Cochin, India</span>
+          </div>
+          <ul>
+            <li>Built data-driven tests and integrated bug tracking with Mantis and SQL-based verification routines.</li>
+          </ul>
+        </div>
+
+        <div class="cv-event">
+          <div class="cv-event-title">Jr. Software Quality Assurance Engineer</div>
+          <div class="cv-event-org">ART Technology &amp; Software India Pvt. Ltd</div>
+          <div class="cv-event-meta">
+            <span>Nov 2010 – Apr 2012</span>
+            <span>Cochin, India</span>
+          </div>
+          <ul>
+            <li>Performed SQL-based backend validation, test case documentation, and system testing of e-commerce platforms linked with Microsoft RMS.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="cv-section">
+        <div class="cv-section-title">Education</div>
+
+        <div class="cv-event">
+          <div class="cv-event-title">PhD in Computer Science | Explainable AI &amp; NLP</div>
+          <div class="cv-event-subtitle">Research Focus: Explainable AI, evidence analysis, and interpretable approaches to automated fact verification</div>
+          <div class="cv-event-org" style="margin-top:3px;">School of Engineering, Computer and Mathematical Sciences, Auckland University of Technology (AUT)</div>
+          <div class="cv-event-meta"><span>Mar 2020 – Aug 2025</span></div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="cv-event">
+          <div class="cv-event-title">Master of Information Technology</div>
+          <div class="cv-event-org">Eastern Institute of Technology</div>
+          <div class="cv-event-meta"><span>Mar 2016 – Apr 2019</span></div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="cv-event">
+          <div class="cv-event-title">Bachelor of Technology (BTech)</div>
+          <div class="cv-event-subtitle">Computer Science &amp; Engineering</div>
+          <div class="cv-event-org" style="margin-top:3px;">Government Engineering College, Palakkad</div>
+          <div class="cv-event-meta"><span>Mar 2004 – Dec 2009</span></div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Skills</div>
+        <div class="tag-cloud">
+          <span class="cvtag">Explainable AI (XAI)</span>
+          <span class="cvtag">Natural Language Processing</span>
+          <span class="cvtag">Retrieval-Augmented Generation</span>
+          <span class="cvtag">Automated Fact Verification</span>
+          <span class="cvtag">Speech &amp; Language Technology</span>
+          <span class="cvtag">AI for Indigenous Languages</span>
+          <span class="cvtag">Evidence Synthesis</span>
+          <span class="cvtag">Qualitative &amp; Survey Research</span>
+          <span class="cvtag">Critical Thinking</span>
+          <span class="cvtag">Technical Writing</span>
+          <span class="cvtag">Stakeholder Communication</span>
+          <span class="cvtag">Research Ethics &amp; Compliance</span>
+          <span class="cvtag">Python</span>
+          <span class="cvtag">LaTeX</span>
+        </div>
+      </div>
+
+    </div><!-- /left-col -->
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+
+      <!-- PUBLICATIONS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Publications</div>
+
+        <div class="pub-subsection-title">
+          <svg viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+          Journal Articles
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Exploring the Potential of Low-Barrier AI Tools for Culturally Responsive STEM Learning: Early Māori and Pacific Learner Insights from the TechTahi Platform</div>
+          <div class="pub-authors">Williams, T., Nguyen, M., et al., <strong>Vallayil, M.</strong></div>
+          <div class="pub-venue">Education Sciences · May 2026</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">CARAG: A Context-Aware Retrieval Framework for Fact Verification, Integrating Local and Global Perspectives of Explainable AI</div>
+          <div class="pub-authors"><strong>Vallayil, M.</strong>, Nand, P., Yan, W., et al.</div>
+          <div class="pub-venue">Applied Sciences · Feb 2025</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Explainability of Automated Fact Verification Systems: A Comprehensive Review</div>
+          <div class="pub-authors"><strong>Vallayil, M.</strong>, Nand, P., Yan, W., Allende-Cid, H.</div>
+          <div class="pub-venue">Applied Sciences · Nov 2023</div>
+        </div>
+
+        <div class="pub-subsection-title">
+          <svg viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg>
+          Conference Papers
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Objective-Oriented Transformer for Abstractive Document Summarization</div>
+          <div class="pub-authors">Nand, P., Zhang, C., <strong>Vallayil, M.</strong></div>
+          <div class="pub-venue">Jan 2025</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Unsupervised Thematic Context Discovery for Explainable AI in Fact Verification: Advancing the CARAG Framework</div>
+          <div class="pub-authors"><strong>Vallayil, M.</strong>, Nand, P., Yan, W., Allende-Cid, H.</div>
+          <div class="pub-venue">Jan 2025</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Explainable AI through Thematic Clustering and Contextual Visualization: Advancing Macro-Level Explainability in AFV Systems</div>
+          <div class="pub-authors"><strong>Vallayil, M.</strong>, Nand, P., Yan, W.</div>
+          <div class="pub-venue">Dec 2024</div>
+        </div>
+
+        <div class="pub-subsection-title">
+          <svg viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+          Books &amp; Book Chapters
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Whakamanawa te Mātauranga: Decolonising the STEM Space and (Re)imaging Curriculum and Practice through Māori and Pacific Knowledge in STEM Subjects and Disciplines to Empower Indigenous Students</div>
+          <div class="pub-authors"><strong>Vallayil, M.</strong>, Abraham, H., et al.</div>
+          <div class="pub-venue">Book · Jul 2024</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">The Potential of Voice Recognition Technology and Artificial Intelligence (AI) to Support the Acquisition of te reo Māori and Digital Literacy in Early Child Development – A Literature Review</div>
+          <div class="pub-authors">Ka'ai, T., Nand, P., et al., <strong>Vallayil, M.</strong></div>
+          <div class="pub-venue">Book · Sep 2022</div>
+        </div>
+
+        <div class="pub-subsection-title">
+          <svg viewBox="0 0 20 20"><path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"/><path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"/><path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"/></svg>
+          Datasets &amp; Technical Reports
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">'manjuvallayil/factver_master' (Hugging Face Dataset)</div>
+          <div class="pub-authors"><strong>Vallayil, M.</strong>, Nand, P.</div>
+          <div class="pub-venue">Dataset · Jan 2025</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Data Analysis Report: Based on Whānau Responses to an Online Survey Designed to Gauge Perspectives on the Use of Assistive Technologies in te reo Māori Language Acquisition</div>
+          <div class="pub-authors">Smith-Henderson, T., Ka'ai, T., et al., <strong>Vallayil, M.</strong></div>
+          <div class="pub-venue">Technical Report · Dec 2022</div>
+        </div>
+
+        <div class="researchgate-link">
+          Full publication list with abstracts:<br>
+          <a href="https://www.researchgate.net/profile/Manju-Vallayil-2" target="_blank">researchgate.net/profile/Manju-Vallayil-2</a>
+        </div>
+      </div>
+
+      <!-- SELECTED METHODS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Selected Methods</div>
+        <div class="tag-list">
+          <div class="tag-item">Context-Aware Retrieval (RAG)</div>
+          <div class="tag-item">Thematic Clustering &amp; Embeddings</div>
+          <div class="tag-item">NLP Pipeline Development</div>
+          <div class="tag-item">Interpretable ML Modelling</div>
+          <div class="tag-item">Literature Review &amp; Evidence Synthesis</div>
+          <div class="tag-item">Survey &amp; Questionnaire Analysis</div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Certifications</div>
+        <div class="award-item">
+          <span>Claude Code in Action — Anthropic</span>
+        </div>
+      </div>
+
+      <!-- AWARDS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Awards</div>
+
+        <div class="award-item">
+          <span>PhD Full Tuition Fee Waiver</span>
+          <span class="award-year">2021–2024</span>
+        </div>
+        <hr class="divider">
+        <div class="award-item">
+          <span>AUT ECMS Research Scholarship</span>
+          <span class="award-year">2022</span>
+        </div>
+        <hr class="divider">
+        <div class="award-item">
+          <span>AUT DCT Faculty Postgraduate Summer Research Award ×2</span>
+          <span class="award-year">2023, 2024</span>
+        </div>
+        <hr class="divider">
+        <div class="award-item">
+          <span>Futures Pacific (CIIRID: IDEA) – AUT-PUCV Chile Scholarship ×2</span>
+          <span class="award-year">2021, 2023</span>
+        </div>
+        <hr class="divider">
+        <div class="award-item">
+          <span>AUT Doctoral Journal Writing Grant</span>
+          <span class="award-year">2025</span>
+        </div>
+      </div>
+
+    </div><!-- /right-col -->
+
+  </div><!-- /columns -->
+
+</div><!-- /page -->
+</body>
+</html>
