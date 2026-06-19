@@ -35,11 +35,21 @@
 
   /* ── HERO ── */
   .hero {
-    background: linear-gradient(140deg, #120030 0%, #3E0097 55%, #7040cc 100%);
+    position: relative;
+    background: url('manju.png') center center / cover no-repeat;
     color: white;
     padding: 80px 24px 64px;
     text-align: center;
   }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, rgba(18,0,48,0.82) 0%, rgba(62,0,151,0.75) 55%, rgba(112,64,204,0.65) 100%);
+  }
+
+  .hero > * { position: relative; z-index: 1; }
 
   .hero-photo {
     width: 124px;
