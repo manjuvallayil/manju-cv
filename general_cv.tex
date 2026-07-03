@@ -1,0 +1,309 @@
+%% Manju Vallayil — General CV (Data Science / AI Research)
+%% Compile with: pdflatex general_cv.tex  (run twice)
+
+\documentclass[10.5pt,a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[left=1.8cm, right=1.8cm, top=1.5cm, bottom=1.8cm]{geometry}
+\usepackage{charter}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+\usepackage[
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  citecolor=accent
+]{hyperref}
+\usepackage{fontawesome5}
+
+% ── Colours ───────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{3E0097}
+\definecolor{accentlt}{HTML}{EDE8F7}
+\definecolor{mid}{HTML}{444444}
+\definecolor{light}{HTML}{999999}
+
+% ── Section headings ──────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\color{accent}\small\bfseries\scshape}{}{0em}{\MakeUppercase}
+  [\vspace{1pt}\color{accent}\rule{\linewidth}{1.5pt}]
+\titlespacing{\section}{0pt}{16pt}{7pt}
+
+% ── List style ────────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.3em, itemsep=2pt, topsep=3pt, parsep=0pt,
+  label={\color{accent!60}\small\textbullet}
+}
+\newcommand{\tabitem}{{\color{accent!70}\textbullet}\enspace}
+
+% ── Experience left-border box ────────────────────────────────────────────────
+\newenvironment{expbox}{%
+  \begin{tcolorbox}[
+    blanker, breakable,
+    left=10pt,
+    borderline west={2.5pt}{0pt}{accentlt},
+    before upper={\parskip=2pt},
+    top=0pt, bottom=0pt
+  ]
+}{%
+  \end{tcolorbox}\vspace{4pt}
+}
+
+% ── Role / Edu macros ─────────────────────────────────────────────────────────
+\newcommand{\role}[4]{%
+  {\bfseries #1}\hfill{\small\color{accent}#2}\\[-1pt]
+  {\small\color{mid}#3}\hfill{\small\color{light}#4}\\[3pt]%
+}
+
+\newcommand{\edu}[4]{%
+  {\bfseries #1}\hfill{\small\color{accent}#2}\\[-1pt]
+  {\small\color{mid}#3}\hfill{\small\color{light}#4}\\[2pt]%
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── Full-bleed header ─────────────────────────────────────────────────────────
+\vspace*{-1.5cm}
+\begin{tcolorbox}[
+  enhanced, colback=accent, colframe=accent,
+  arc=0pt, boxrule=0pt,
+  left=1.8cm, right=1.8cm, top=16pt, bottom=14pt,
+  enlarge left by=-1.8cm, enlarge right by=-1.8cm,
+  width=\textwidth+3.6cm
+]
+  \begin{minipage}[t]{0.54\linewidth}
+    {\color{white}\LARGE\bfseries Manju Vallayil}\\[5pt]
+    {\color{white!65!accent}\small
+      AI Researcher\enspace·\enspace
+      Explainable AI \& NLP\enspace·\enspace
+      PhD, Computer Science}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.43\linewidth}
+    \raggedleft\small\color{white!80!accent}
+    \faEnvelope\enspace
+      \href{mailto:manjuvallayil@gmail.com}{\textcolor{white!80!accent}{manjuvallayil@gmail.com}}\\[3pt]
+    \faLinkedin\enspace
+      \href{https://linkedin.com/in/manju-vallayil-phd-5b1b7a142/}{\textcolor{white!80!accent}{linkedin/manju-vallayil-phd}}\\[3pt]
+    \faGlobe\enspace
+      \href{https://manju.vallayil.com}{\textcolor{white!80!accent}{manju.vallayil.com}}\\[3pt]
+    \faMapMarker*\enspace Auckland, New Zealand
+  \end{minipage}
+\end{tcolorbox}
+
+\vspace{12pt}
+
+% ── Profile ───────────────────────────────────────────────────────────────────
+\section{Profile}
+
+AI researcher and NLP specialist with a PhD in Computer Science, focused on Explainable AI,
+context-aware evidence retrieval, and interpretable machine learning. Alongside doctoral
+research, five years of independent research assistant and research officer roles
+spanning AI for culturally responsive education, clinical ML for tinnitus detection, and
+NLP-powered bilingual language learning technology. Each was a distinct applied engagement
+with real community, healthcare, and education partners, not an extension of the thesis.
+Throughout, I chose data and systems work over academic teaching positions, staying close to
+applied problems rather than theoretical ones. Now seeking to bring this research depth into
+industry data science and AI, where models and insights serve real organisational decisions.
+
+% ── Key Skills ────────────────────────────────────────────────────────────────
+\section{Key Skills}
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+  \textbf{\color{mid}AI \& Machine Learning}
+    & \textbf{\color{mid}Research \& Methods} \\
+  \tabitem Explainable AI (XAI)
+    & \tabitem NLP pipeline development \\
+  \tabitem Retrieval-Augmented Generation (RAG)
+    & \tabitem Literature review \& evidence synthesis \\
+  \tabitem Automated fact verification
+    & \tabitem Qualitative \& mixed-methods research \\
+  \tabitem Thematic clustering \& embeddings
+    & \tabitem Technical writing \& publication \\[20pt]
+  \textbf{\color{mid}Tools \& Languages}
+    & \textbf{\color{mid}Domain Knowledge} \\
+  \tabitem Python (NLP, ML, data analysis)
+    & \tabitem AI for education \& indigenous language \\
+  \tabitem Hugging Face, scikit-learn, spaCy
+    & \tabitem Human-centred \& community research \\
+  \tabitem SQL, LaTeX, Git
+    & \tabitem Stakeholder communication \& reporting \\
+  \tabitem Microsoft Excel \& PowerPoint
+    & \tabitem Research ethics \& compliance \\
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+
+% ── Experience ────────────────────────────────────────────────────────────────
+\section{Experience}
+
+\begin{expbox}
+\role{Research Assistant — AI for Education \& Community Innovation}
+     {Mar 2025 – Dec 2025}
+     {Auckland University of Technology}
+     {Auckland, NZ}
+\begin{itemize}
+  \item Evaluated AI-enabled, low-barrier tools for culturally responsive STEM education
+        within the \textbf{TechTahi} project — conducting data analysis on adoption patterns
+        among Māori and Pacific learners and translating findings into actionable insights.
+  \item Designed and implemented research methodology to assess how AI tools are experienced
+        by learners, applying mixed-methods analysis across qualitative and quantitative data.
+  \item Co-authored peer-reviewed publication in \textit{Education Sciences} (May 2026),
+        contributing to evidence synthesis and interpretation of AI tool outcomes.
+\end{itemize}
+\end{expbox}
+
+\begin{expbox}
+\role{Research Officer — AI-Driven Language Learning Technology}
+     {Sep 2021 – Dec 2024}
+     {Auckland University of Technology}
+     {Auckland, NZ}
+\begin{itemize}
+  \item Co-developed \textbf{Te Kōhanga o te Tūī}, an AI-enabled bilingual learning platform
+        combining speech recognition and NLP to support early childhood acquisition of
+        te reo Māori and English.
+  \item Contributed to applied NLP research, technical architecture documentation, and
+        evaluation of speech and language model performance within a real deployment context.
+  \item Liaised across language specialists, developers, and community stakeholders to
+        translate research outputs into functional, accessible technology.
+\end{itemize}
+\end{expbox}
+
+\begin{expbox}
+\role{Research Assistant — AI Modelling for Tinnitus Detection}
+     {Mar 2022 – Mar 2023}
+     {Auckland University of Technology}
+     {Auckland, NZ}
+\begin{itemize}
+  \item Applied machine learning to EEG, clinical, and psychological datasets to model
+        factors influencing tinnitus detection and treatment outcomes in an interdisciplinary
+        research setting.
+  \item Performed data preprocessing, feature engineering, and model evaluation —
+        identifying patterns across heterogeneous clinical data sources.
+  \item Built and documented a minimum viable prototype (MVP) demonstrating practical
+        application of AI-driven research findings to clinical stakeholders.
+\end{itemize}
+\end{expbox}
+
+\begin{expbox}
+\role{Business Analyst}
+     {Oct 2017 – Mar 2019}
+     {Tureya Limited}
+     {Auckland, NZ}
+\begin{itemize}
+  \item Led requirements gathering and stakeholder communication for mobile application
+        development — producing user needs documentation, data flow diagrams, and UX
+        wireframes supporting MVP delivery.
+  \item Developed and executed test plans, verifying system logic and data flows against
+        specified requirements before client handover.
+\end{itemize}
+\end{expbox}
+
+\begin{expbox}
+\role{Software Quality Assurance Engineer}
+     {May 2012 – Feb 2014}
+     {TechWyse Internet Marketing}
+     {Cochin, India}
+\begin{itemize}
+  \item Built data-driven test suites and performed SQL-based backend validation to verify
+        data integrity and system accuracy across web applications.
+\end{itemize}
+\end{expbox}
+
+\begin{expbox}
+\role{Junior Software Quality Assurance Engineer}
+     {Nov 2010 – Apr 2012}
+     {ART Technology \& Software India Pvt.\ Ltd}
+     {Cochin, India}
+\begin{itemize}
+  \item SQL-based backend data validation, test case documentation, and system testing of
+        e-commerce platforms integrated with Microsoft RMS.
+\end{itemize}
+\end{expbox}
+
+% ── Selected Publications ─────────────────────────────────────────────────────
+\section{Selected Publications}
+
+\begin{itemize}
+
+  \item \textbf{Vallayil, M.}, Nand, P., Yan, W., et al.
+        ``CARAG: A Context-Aware Retrieval Framework for Fact Verification, Integrating
+        Local and Global Perspectives of Explainable AI.''
+        \textit{Applied Sciences}, Feb 2025.
+        \href{https://www.mdpi.com/2076-3417/15/4/1970}{\small[link]}
+
+  \item \textbf{Vallayil, M.}, Nand, P., Yan, W., Allende-Cid, H.
+        ``Explainability of Automated Fact Verification Systems: A Comprehensive Review.''
+        \textit{Applied Sciences}, Nov 2023.
+        \href{https://www.mdpi.com/2076-3417/13/23/12608}{\small[link]}
+
+  \item \textbf{Vallayil, M.}, Nand, P., Yan, W.
+        ``Explainable AI through Thematic Clustering and Contextual Visualization:
+        Advancing Macro-Level Explainability in AFV Systems.''
+        \textit{ACIS}, Dec 2024.
+        \href{https://aisel.aisnet.org/acis2024/101/}{\small[link]}
+
+  \item \textbf{Vallayil, M.}, Nand, P.
+        \textit{manjuvallayil/factver\_master} (Hugging Face Dataset), Jan 2025.
+        \href{https://doi.org/10.57967/hf/5772}{\small[link]}
+
+\end{itemize}
+
+{\small\color{light}Full list (10+ papers, datasets, technical reports):
+\href{https://scholar.google.com/citations?user=6xGoEsMAAAAJ}{Google Scholar}\enspace·\enspace
+\href{https://www.researchgate.net/profile/Manju-Vallayil-2}{ResearchGate}}
+
+% ── Education ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\edu{Doctor of Philosophy (PhD) — Computer Science}
+    {Mar 2020 – Aug 2025}
+    {Auckland University of Technology (AUT)}
+    {Auckland, NZ}
+{\small\textit{Thesis:} \href{https://openrepository.aut.ac.nz/items/33de7437-821c-4a19-8539-0d38c6848d04}{Advancing Explainable AI: A Global Context-Aware Evidence Retrieval Framework for Interpretable Fact Verification}}
+
+\vspace{6pt}
+
+\edu{Master of Information Technology}
+    {Mar 2016 – Apr 2019}
+    {Eastern Institute of Technology}
+    {New Zealand}
+
+\edu{Bachelor of Technology (BTech) — Computer Science \& Engineering}
+    {Mar 2004 – Dec 2009}
+    {Government Engineering College, Palakkad}
+    {India}
+
+% ── Awards & Recognition ──────────────────────────────────────────────────────
+\section{Awards \& Recognition}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}p{0.78\linewidth}r@{}}
+  \href{https://www.testdome.com/certificates/9fd52f85ece34b29bba43800c2918dbd}{Python — TestDome {\small(Top 10\%)}}
+    & \textcolor{accent}{\small\bfseries 2026} \\
+  \href{https://verify.skilljar.com/c/ngmh5b4cn9um}{Claude Code in Action Certification — Anthropic}
+    & \textcolor{accent}{\small\bfseries 2026} \\
+  AUT Doctoral Journal Writing Grant
+    & \textcolor{accent}{\small\bfseries 2025} \\
+  AUT DCT Faculty Postgraduate Summer Research Award {\small(×2)}
+    & \textcolor{accent}{\small\bfseries 2023, 2024} \\
+  Futures Pacific (CIIRID: IDEA) — AUT-PUCV Chile Scholarship {\small(×2)}
+    & \textcolor{accent}{\small\bfseries 2021, 2023} \\
+  AUT ECMS Research Scholarship
+    & \textcolor{accent}{\small\bfseries 2022} \\
+  PhD Full Tuition Fee Waiver
+    & \textcolor{accent}{\small\bfseries 2021--2024} \\
+\end{tabular}
+
+\end{document}

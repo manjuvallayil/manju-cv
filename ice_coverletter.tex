@@ -1,0 +1,161 @@
+%% Manju Vallayil — Cover Letter for ICE Clinical Data Mapping Analyst (Graduate)
+%% Compile with: pdflatex ice_coverletter.tex
+
+\documentclass[10.5pt,a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[left=1.8cm, right=1.8cm, top=1.5cm, bottom=1.8cm]{geometry}
+\usepackage{charter}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage[most]{tcolorbox}
+\usepackage[
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  citecolor=accent
+]{hyperref}
+\usepackage{fontawesome5}
+
+% ── Colours ───────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{3E0097}
+\definecolor{accentlt}{HTML}{EDE8F7}
+\definecolor{mid}{HTML}{444444}
+\definecolor{light}{HTML}{999999}
+
+% ── List style ────────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.3em, itemsep=4pt, topsep=4pt, parsep=0pt,
+  label={\color{accent!60}\small\textbullet}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── Full-bleed header (matches CV) ────────────────────────────────────────────
+\vspace*{-1.5cm}
+\begin{tcolorbox}[
+  enhanced, colback=accent, colframe=accent,
+  arc=0pt, boxrule=0pt,
+  left=1.8cm, right=1.8cm, top=16pt, bottom=14pt,
+  enlarge left by=-1.8cm, enlarge right by=-1.8cm,
+  width=\textwidth+3.6cm
+]
+  \begin{minipage}[t]{0.54\linewidth}
+    {\color{white}\LARGE\bfseries Manju Vallayil}\\[5pt]
+    {\color{white!65!accent}\small
+      Data Analyst\enspace·\enspace
+      Clinical Informatics \& ML\enspace·\enspace
+      PhD, Computer Science}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.43\linewidth}
+    \raggedleft\small\color{white!80!accent}
+    \faEnvelope\enspace
+      \href{mailto:manjuvallayil@gmail.com}{\textcolor{white!80!accent}{manjuvallayil@gmail.com}}\\[3pt]
+    \faLinkedin\enspace
+      \href{https://linkedin.com/in/manju-vallayil-phd-5b1b7a142/}{\textcolor{white!80!accent}{linkedin/manju-vallayil-phd}}\\[3pt]
+    \faGlobe\enspace
+      \href{https://manju.vallayil.com}{\textcolor{white!80!accent}{manju.vallayil.com}}\\[3pt]
+    \faMapMarker*\enspace Auckland, New Zealand
+  \end{minipage}
+\end{tcolorbox}
+
+\vspace{20pt}
+
+% ── Date & addressee ──────────────────────────────────────────────────────────
+{\small\color{light} 1 July 2026}
+
+\vspace{10pt}
+
+{\small\color{mid}
+Hiring Team\\
+ICE (Inspire, Create, Engage)
+}
+
+\vspace{16pt}
+
+% ── Subject line ──────────────────────────────────────────────────────────────
+{\color{accent}\bfseries Re: Clinical Data Mapping Analyst (Graduate)}
+
+{\color{accent}\rule{\linewidth}{1.5pt}}
+
+\vspace{14pt}
+
+% ── Salutation ────────────────────────────────────────────────────────────────
+Dear Hiring Team,
+
+\vspace{6pt}
+
+% ── Opening ───────────────────────────────────────────────────────────────────
+I am applying for the Clinical Data Mapping Analyst (Graduate) role at ICE. I hold a PhD
+in Computer Science and have worked directly with clinical datasets in a healthcare research
+context. That combination of technical grounding and applied healthcare experience aligns well
+with this role, and it maps closely to the work I have already been doing.
+
+\vspace{10pt}
+
+% ── Three fit points ──────────────────────────────────────────────────────────
+\textbf{\color{mid}Three points that speak directly to this role:}
+
+\vspace{4pt}
+
+\begin{tcolorbox}[
+  blanker, breakable,
+  left=10pt,
+  borderline west={2.5pt}{0pt}{accentlt},
+  before upper={\parskip=6pt},
+  top=0pt, bottom=0pt
+]
+\begin{itemize}
+
+  \item \textbf{Clinical data, firsthand.}
+        As a Research Assistant at AUT, I applied machine learning to EEG, psychological, and
+        clinical datasets in a tinnitus detection project. The work required preprocessing
+        heterogeneous data, resolving inconsistencies across sources, and keeping clear
+        records of processing choices and outcomes throughout.
+
+  \item \textbf{Precision built through QA.}
+        Before research, I spent several years as a Software Quality Assurance Engineer
+        performing SQL-based backend data validation, writing test case documentation, and
+        verifying data integrity on live systems. That background made systematic accuracy
+        checks second nature, not an afterthought.
+
+  \item \textbf{Contribution to clinical EEG tooling.}
+        During the tinnitus project I contributed a pull request to
+        \href{https://github.com/ufvceiec/EEGRAPH}{EEGRAPH}, an open-source EEG processing
+        library used in clinical research. The PR was reviewed and merged by the project
+        maintainers. Getting a contribution accepted into clinical research tooling required
+        understanding the underlying data structures and processing patterns well enough to
+        meet the standards of researchers actively working in the field.
+
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{10pt}
+
+% ── Closing ───────────────────────────────────────────────────────────────────
+Having completed my PhD, I am at the point where I want to move research skills into
+real-world application rather than continue in academia. A focused, applied contract like
+this is a deliberate step in that direction: contributing to a live project, working
+alongside industry professionals, and building experience in a setting where the data has
+genuine consequence. I would welcome the opportunity to be part of this project and am
+available to start immediately.
+
+\vspace{16pt}
+
+Yours sincerely,
+
+\vspace{20pt}
+
+{\bfseries\color{accent} Manju Vallayil}
+
+\end{document}
